@@ -1,0 +1,526 @@
+/* Catppuccin Mocha Color Palette */
+:root {
+    --base: #1e1e2e;
+    --mantle: #181825;
+    --crust: #11111b;
+    --text: #cdd6f4;
+    --subtext1: #bac2de;
+    --subtext0: #a6adc8;
+    --overlay2: #9399b2;
+    --overlay1: #7f849c;
+    --overlay0: #6c7086;
+    --surface2: #585b70;
+    --surface1: #45475a;
+    --surface0: #313244;
+    --rosewater: #f5e0dc;
+    --flamingo: #f2cdcd;
+    --pink: #f5c2e7;
+    --mauve: #cba6f7;
+    --red: #f38ba8;
+    --maroon: #eba0ac;
+    --peach: #fab387;
+    --yellow: #f9e2af;
+    --green: #a6e3a1;
+    --teal: #94e2d5;
+    --sky: #89dceb;
+    --sapphire: #74c7ec;
+    --blue: #89b4fa;
+    --lavender: #b4befe;
+    
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-sans: 'Inter', 'Roboto', sans-serif;
+}
+
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--base);
+    color: var(--text);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVEWFhYWDg4N3d3dtbW17e3t1dXWBgYGHh4d5eXlzc3OLi4ubm5uVlZWPj4+NjY19fX2JiYl/f39ra2uRkZGZmZlpaWmXl5dvb29xcXGTk5NnZ2c4zIgWAAAAT0lEQVR4nO3biQmAQBAAQUFP8E75w/qPVoIdpMfw2o1Qg0KdQoVCmUK5QpFCsUKJQqlCmUK5QoVCpUKVQrVCjUKtQp1CvUKDQqNCk0KzQg+ZBRVzgEDiCwAAAABJRU5ErkJggg==');
+    opacity: 0.05;
+    z-index: -1;
+    pointer-events: none;
+}
+
+a {
+    color: var(--lavender);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--mauve);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: var(--mantle);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--mauve);
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: var(--surface0);
+}
+
+.nav-links a.active {
+    color: var(--mauve);
+    background-color: var(--surface0);
+}
+
+.github-link {
+    font-size: 1.2rem;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Hero Section with Terminal */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 2rem 0;
+}
+
+.terminal {
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--crust);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: float 6s ease-in-out infinite;
+    position: relative;
+    cursor: pointer;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.terminal-header {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--surface0);
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.terminal-buttons span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.close {
+    background-color: var(--red);
+}
+
+.minimize {
+    background-color: var(--yellow);
+}
+
+.maximize {
+    background-color: var(--green);
+}
+
+.terminal-title {
+    margin-left: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--subtext0);
+}
+
+.terminal-body {
+    padding: 1rem;
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.line {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.prompt {
+    color: var(--green);
+    margin-right: 0.5rem;
+}
+
+.command {
+    color: var(--text);
+}
+
+.cursor {
+    display: inline-block;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+#terminal-output {
+    margin-top: 1rem;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: var(--mantle);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-content h2 {
+    color: var(--mauve);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+    color: var(--subtext1);
+}
+
+/* Skills Section Enhancement */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 2rem;
+}
+
+.skill {
+    background-color: var(--surface0);
+    color: var(--mauve);
+    padding: 0.7rem 1.2rem;
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--surface1);
+}
+
+.skill:hover {
+    transform: translateY(-5px) scale(1.05);
+    background-color: var(--mauve);
+    color: var(--crust);
+    box-shadow: 0 5px 15px rgba(203, 166, 247, 0.4);
+    border-color: var(--lavender);
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--mauve), var(--blue));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-pic::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.05) 25%,
+        transparent 50%
+    );
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    background-image: url('avatar.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Add a fallback in case the image doesn't load */
+.avatar::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--crust);
+    opacity: 0;
+}
+
+.avatar.error::after {
+    opacity: 1;
+}
+
+/* Programs Page */
+.programs-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.programs-header h1 {
+    color: var(--mauve);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.programs-header p {
+    color: var(--subtext1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.program-card {
+    background-color: var(--mantle);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--surface0);
+}
+
+.program-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-color: var(--mauve);
+}
+
+.program-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--blue);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.program-card:hover .program-icon {
+    transform: scale(1.1);
+    color: var(--mauve);
+}
+
+.program-card h3 {
+    color: var(--lavender);
+    margin-bottom: 0.5rem;
+}
+
+.program-card p {
+    color: var(--subtext1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--mantle);
+    margin-top: 4rem;
+}
+
+.heart {
+    color: var(--red);
+    display: inline-block;
+    animation: heartbeat 1.5s ease infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .about {
+        flex-direction: column;
+    }
+    
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Click instruction for terminal */
+.click-instruction {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.8rem;
+    color: var(--overlay1);
+    font-family: var(--font-sans);
+    background-color: var(--surface0);
+    padding: 4px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.terminal:hover .click-instruction {
+    opacity: 1;
+}
+
+/* Custom Ableton logo */
+.ableton-icon {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ableton-icon::before,
+.ableton-icon::after {
+    content: '';
+    position: absolute;
+    background-color: var(--mauve);
+    border-radius: 2px;
+}
+
+/* Horizontal bars for Ableton logo */
+.ableton-icon::before {
+    width: 12px;
+    height: 40px;
+    left: 15px;
+}
+
+.ableton-icon::after {
+    width: 12px;
+    height: 40px;
+    right: 15px;
+}
+
+/* Add the middle bar */
+.ableton-icon span {
+    width: 12px;
+    height: 40px;
+    background-color: var(--mauve);
+    border-radius: 2px;
+    position: relative;
+}
+
+/* Hover effect for Ableton logo */
+.program-card:hover .ableton-icon::before,
+.program-card:hover .ableton-icon::after,
+.program-card:hover .ableton-icon span {
+    background-color: var(--blue);
+} 
