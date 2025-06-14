@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const responses = [
         "SEI2187 - Web Developer & Blahaj Enthusiast :3",
         "sei2187@nimburu.com<br>-------------<br>OS: EndeavourOS Linux x86_64<br>Kernel: 6.9.3-arch1-1<br>Uptime: 2 days, 5 hours, 13 mins<br>Packages: 2187 (pacman)<br>Shell: zsh 5.9<br>Resolution: 2560x1440<br>DE: Hyprland<br>WM: Hyprland<br>Terminal: Alacritty<br>CPU: AMD Ryzen 7 5800HS (16) @ 3.200GHz<br>GPU: NVIDIA RTX 3060<br>Memory: 6140MiB / 40960MiB",
-        "# About Me<br><br>haiii :3 im SEI2187 im a random programmer and blahaj enthusiast<br><br>i love making pretty websites with cool animations and working with TypeScript and CSS!<br><br>when im not coding you can find me cuddling with my blahaj or exploring new tech~",
+        "# About Me<br><br>haiii :3 im SEI2187 im a random programmer and blahaj enthusiast<br><br>i love making pretty websites with cool animations and working with TypeScript and CSS!<br><br>when im not coding you can find me exploring new tech~",
         "> starting development server...<br>> compiled successfully!<br><br>You can now view the application in the browser.<br><br>  Local:            http://localhost:3000<br>  On Your Network:  http://192.168.1.5:3000<br><br>yay! it works :3",
-        "Enumerating objects: 12, done.<br>Counting objects: 100% (12/12), done.<br>Delta compression using up to 8 threads<br>Compressing objects: 100% (8/8), done.<br>Writing objects: 100% (8/8), 1.21 KiB | 1.21 MiB/s, done.<br>Total 8 (delta 4), reused 0 (delta 0), pack-reused 0<br>remote: Resolving deltas: 100% (4/4), completed with 4 local objects.<br>To github.com:sei2187/awesome-project.git<br>   e7d9abc..8e3e9f5  main -> main<br><br>pushed successfully~ uwu"
+        "Enumerating objects: 12, done.<br>Counting objects: 100% (12/12), done.<br>Delta compression using up to 8 threads<br>Compressing objects: 100% (8/8), done.<br>Writing objects: 100% (8/8), 1.21 KiB | 1.21 MiB/s, done.<br>Total 8 (delta 4), reused 0 (delta 0), pack-reused 0<br>remote: Resolving deltas: 100% (4/4), completed with 4 local objects.<br>To github.com:sei2187/awesome-project.git<br>   e7d9abc..8e3e9f5  main -> main<br><br>pushed successfully~"
     ];
     
     const typingText = document.getElementById('typing-text');
